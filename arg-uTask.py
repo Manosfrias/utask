@@ -9,7 +9,10 @@ parser.add_argument("-a", "--add", action="store_true", help="Add a new task")
 args = parser.parse_args()
 
 if args.add:
-	print(args.name)
+    tasksLibrary = open("task",'w')
+    tasksLibrary.write(args.name)
+    tasksLibrary.close()
+	print("Se ha añadido {} a la lista de tareas".format(args.name))
 
 
 # class utask
